@@ -22,3 +22,22 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Project specific exclusions for clean Vercel deploy
+*.sql
+*.bat
+scripts/
+seed_data.sql
+create_user.sql
+*.ts
+!*.config.ts
+!src/**/*.ts
+!hooks/**/*.ts
+!utils/**/*.ts
+!types/**/*.ts
+!services/**/*.ts
+!main.tsx
+!App.tsx
+
+# Ignore the boilerplate src if it's redundant
+/src/src/
