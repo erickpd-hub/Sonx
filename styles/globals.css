@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  /* Neobrutalist color palette - Updated without pink and purple */
+  --color-brutal-yellow: #ffed4e;
+  --color-brutal-blue: #4d96ff;
+  --color-brutal-green: #6bff91;
+  --color-brutal-orange: #ff9e64;
+  --color-brutal-red: #ff6b6b;
+  --color-brutal-cyan: #4ecdc4;
+  
+  /* Dark mode colors */
+  --color-dark-bg: #1a1a1a;
+  --color-dark-surface: #2a2a2a;
+  --color-dark-text: #ffffff;
+  
+  /* Light mode colors */
+  --color-light-bg: #ffffff;
+  --color-light-surface: #f5f5f5;
+  --color-light-text: #000000;
+  
+  /* Typography */
+  --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Shadows */
+  --shadow-brutal: 4px 4px 0px 0px #000;
+  --shadow-brutal-lg: 6px 6px 0px 0px #000;
+  --shadow-brutal-xl: 8px 8px 0px 0px #000;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-black;
+    font-family: var(--font-family-sans);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.dark {
+    @apply bg-[var(--color-dark-bg)] text-[var(--color-dark-text)];
+  }
+  
+  h1 {
+    @apply text-4xl font-black;
+  }
+  
+  h2 {
+    @apply text-3xl font-black;
+  }
+  
+  h3 {
+    @apply text-2xl font-black;
+  }
+  
+  h4 {
+    @apply text-xl font-black;
+  }
+  
+  p {
+    @apply text-base;
+  }
+}
+
+.brutal-shadow {
+  box-shadow: var(--shadow-brutal);
+}
+
+.brutal-shadow-lg {
+  box-shadow: var(--shadow-brutal-lg);
+}
+
+.brutal-shadow-xl {
+  box-shadow: var(--shadow-brutal-xl);
+}
+
+.brutal-border {
+  @apply border-4 border-black;
+}
+
+.dark .brutal-border {
+  @apply border-white;
+}
+
+.dark .brutal-shadow {
+  box-shadow: 4px 4px 0px 0px #fff;
+}
+
+.dark .brutal-shadow-lg {
+  box-shadow: 6px 6px 0px 0px #fff;
+}
+
+.dark .brutal-shadow-xl {
+  box-shadow: 8px 8px 0px 0px #fff;
+}
