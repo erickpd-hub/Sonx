@@ -27,17 +27,28 @@ dist-ssr
 *.sql
 *.bat
 scripts/
+
+# Database and Utility scripts
+seed_db.ts
 seed_data.sql
 create_user.sql
-*.ts
-!*.config.ts
-!src/**/*.ts
-!hooks/**/*.ts
-!utils/**/*.ts
-!types/**/*.ts
-!services/**/*.ts
-!main.tsx
-!App.tsx
+check_*.ts
+verify_*.ts
+apply_*.ts
+probe_*.ts
+fix_*.ts
+test_*.ts
+debug_*.sql
+
+# Allow everything else in the project folders
+!src/**/*
+!components/**/*
+!hooks/**/*
+!utils/**/*
+!types/**/*
+!styles/**/*
+!views/**/*
+!data/**/*
 
 # Ignore the boilerplate src if it's redundant
 /src/src/
