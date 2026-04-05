@@ -9,6 +9,7 @@ interface HomeViewProps {
     userPosts: any[];
     mockPosts: any[];
     mockTracks: any[];
+    mockArtists: any[];
     tracksLoading: boolean;
     likedTrackIds: string[];
     onCreatePost: () => void;
@@ -19,6 +20,8 @@ interface HomeViewProps {
     onPlayPost?: (post: any) => void;
     onLikeTrack: (id: string) => void;
     onDownloadTrack: (id: string) => void;
+    onFollowArtist: (id: string) => void;
+    onArtistClick: (id: string) => void;
 }
 
 export function HomeView({
@@ -27,6 +30,7 @@ export function HomeView({
     userPosts,
     mockPosts,
     mockTracks,
+    mockArtists,
     tracksLoading,
     likedTrackIds,
     onCreatePost,
@@ -37,6 +41,8 @@ export function HomeView({
     onLikeTrack,
     onDownloadTrack,
     onPlayPost,
+    onFollowArtist,
+    onArtistClick,
 }: HomeViewProps) {
     return (
         <div className="grid grid-cols-1 xl:grid-cols-[1fr_320px] gap-6">

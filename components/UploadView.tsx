@@ -44,7 +44,7 @@ export function UploadView({ isDark, onUploadComplete }: UploadViewProps) {
       // 1. Upload file to Storage
       const fileExt = formData.file.name.split('.').pop();
       const fileName = `${user.id}/${Date.now()}.${fileExt}`;
-      const { data: uploadData, error: uploadError } = await supabase.storage
+      const { error: uploadError } = await supabase.storage
         .from('tracks')
         .upload(fileName, formData.file);
 

@@ -384,8 +384,8 @@ export default function App() {
                   onPlayTrack={handlePlayTrack}
                   onLikeTrack={handleLikeTrack}
                   onDownloadTrack={handleDownloadTrack}
-                  onFollowArtist={(id) => console.log("Follow", id)}
-                  onArtistClick={(id) => window.location.href = `/profile/${id}`}
+                  onFollowArtist={(id: string) => console.log("Follow", id)}
+                  onArtistClick={(id: string) => window.location.href = `/profile/${id}`}
                   onPlayPost={handlePlayPost}
                 />
               } />

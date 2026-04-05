@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { ProfileView } from "./ProfileView";
 import { supabase } from "../utils/supabase/client";
 import { useAuth } from "./AuthProvider";
@@ -21,7 +21,6 @@ export function UserProfilePage({
 }: any) {
     const { userId } = useParams();
     const { user: authUser } = useAuth();
-    const navigate = useNavigate();
 
     const [profile, setProfile] = useState<any>(null);
     const [loading, setLoading] = useState(true);
